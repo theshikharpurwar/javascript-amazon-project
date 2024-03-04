@@ -80,7 +80,6 @@ export function renderOrderSummary() {
             const priceString = deliveryOption.priceCents === 0 ? 'Free' : `$${formatCurrency(deliveryOption.priceCents)} -`;
 
             const isChecked = deliveryOption.id === cartItem.deliveryOptionId;
-                
 
         html += `
             <div class="delivery-option js-delivery-option" data-product-id="${matchingProduct.id}" data-delivery-option-id="${deliveryOption.id}">
@@ -99,10 +98,8 @@ export function renderOrderSummary() {
             </div>
             `
         });
-
         return html;
     }
-
     document.querySelector('.js-order-summary')
         .innerHTML = cartSummaryHTML;
 
